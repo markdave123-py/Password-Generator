@@ -1,0 +1,93 @@
+body{
+    margin: 0 auto;
+}
+.container{
+    position: relative;
+    width: 20%;
+    left:500px;
+    top: 150px;
+    background: #1F2937;
+    padding: 20px;
+    border: 2px solid blue;
+}
+#copy{
+    position: relative;
+    left: 50px;
+    background-color: green;
+    color: grey;
+    border: none;
+}
+.gen{
+    color: snow;
+}
+.rand{
+    position: relative;
+    bottom: 22px;
+    color: green;
+    font-weight: 800;
+}
+.never{
+    position: relative;
+    bottom: 37px;
+    color: grey;
+    font-size: 12px;
+}.generate{
+    position: relative;
+    bottom: 20px;
+    color: grey;
+    background-color: green;
+    border: none;
+    padding: 4px 15px 4px 15px;
+}
+.display{
+    display: flex;
+    justify-content: space-between;
+}
+#down, .copy1{
+    position: relative;
+    top: 10px;
+}
+.input, .lenght{
+    text-align: center;
+    position: relative;
+    bottom: 40px;
+    color: green;
+    
+}
+#number{
+    text-align: center;
+    color: green;
+    border: none;
+}
+.div{
+    text-align: center;
+}
+.generated1, .generated2, .generated3, .generated4{
+    background-color: grey;
+    color: green;
+    width: 80%;
+    border: none;
+    text-align: center;
+}
+@media (max-width: 375px){
+    .container{
+        width: 70%;
+        position: relative;
+        left: 30px;
+        top: 150px;
+        background: #1F2937;
+        padding: 20px;
+        border: 2px solid blue;
+    }
+}
+@media (min-width: 375px) and (max-width:750px){
+    .container{
+        width: 50%;
+        position: relative;
+        left: 130px;
+        top: 150px;
+        background: #1F2937;
+        padding: 20px;
+        border: 2px solid blue;
+    }
+}
