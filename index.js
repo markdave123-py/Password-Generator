@@ -9,10 +9,10 @@ function generate() {
     let i = 0;
     let value = document.querySelector("#number").value
     if(value < 1 || value > 13){
-        document.querySelector(".generated1").value = "invalid input"
-        document.querySelector(".generated2").value = "invalid input"
-        document.querySelector(".generated3").value = "invalid input"
-        document.querySelector(".generated4").value = "invalid input" 
+        document.querySelector(".generated1").placeholder = "invalid input"
+        document.querySelector(".generated2").placeholder = "invalid input"
+        document.querySelector(".generated3").placeholder = "invalid input"
+        document.querySelector(".generated4").placeholder = "invalid input" 
     }
     
     else {
