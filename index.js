@@ -41,10 +41,10 @@ const generate = () => {
   } else if (myValue.value == "") {
          state.textContent = "Please enter a valid number!";
    } else {
-     generated1.value = "invalid input";
-     generated2.value= "invalid input";
-     generated3.value = "invalid input";
-     generated4.value = "invalid input";
+    //  generated1.value = "invalid input";
+    //  generated2.value= "invalid input";
+    //  generated3.value = "invalid input";
+    //  generated4.value = "invalid input";
      state.textContent = "You entered an invalid input!";
      console.log("value is either less than 1 or greater than 13");
    } 
