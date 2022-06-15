@@ -16,84 +16,14 @@ const state = document.querySelector("#state")
 let isValid = false
 const myValue = document.querySelector("#number");
  const arr = [
-   "q",//auto code formatting caused this, and i'm too lazy to do anything about it 
-   "w",
-   "e",
-   "r",
-   "t",
-   "y",
-   "u",
-   "i",
-   "o",
-   "p",
-   "a",
-   "s",
-   "d",
-   "f",
-   "g",
-   "h",
-   "j",
-   "k",
-   "l",
-   "z",
-   "x",
-   "c",
-   "v",
-   "b",
-   "n",
-   "m",
-   "Q",
-   "W",
-   "E",
-   "R",
-   "T",
-   "Y",
-   "U",
-   "I",
-   "O",
-   "P",
-   "A",
-   "S",
-   "D",
-   "F",
-   "G",
-   "H",
-   "J",
-   "K",
-   "L",
-   "Z",
-   "X",
-   "C",
-   "V",
-   "B",
-   "N",
-   "M",
-   ";",
-   "/",
-   "?",
-   "!",
-   "@",
-   "#",
-   "$",
-   "%",
-   "^",
-   "&",
-   "*",
-   "(",
-   ")",
-   "1",
-   "2",
-   "3",
-   "4",
-   "5",
-   "6",
-   "7",
-   "8",
-   "9",
-   "0",
+   "q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x",
+   "c","v","b","n","m","Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H",
+   "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M", ";", "/", "?", "!", "@", "#", "$",
+   "%", "^", "&", "*","(", ")", "1", "2", "3", "4", "5", "6","7","8","9","0",
  ];
 
 const generate = () => {
+  resetText()
   if (myValue.value >= 1 && myValue.value < 14) {
     state.textContent = " ";
      isValid = true;
@@ -102,7 +32,7 @@ const generate = () => {
       gen2 += arr[Math.floor(Math.random() * arr.length)];
       gen3 += arr[Math.floor(Math.random() * arr.length)];
       gen4 += arr[Math.floor(Math.random() * arr.length)];
-      console.log(gen1,gen2,gen3,gen4)
+      // console.log(gen1,gen2,gen3,gen4) 
      }
      generated1.value = gen1;
      generated2.value= gen2;
@@ -120,42 +50,53 @@ const generate = () => {
    } 
 }
 copy1.addEventListener("click", function () {
+  resetText()
   if (isValid) {
     generated1.select();
     generated1.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(generated1.value);
-    alert("You copied " + generated1.value);
+    copy1.textContent = "copied!";
   } else {
     alert("You have not generated a password");
   }
 });
 copy2.addEventListener("click", function () {
+  resetText()
   if (isValid) {
     generated2.select();
     generated2.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(generated2.value);
-    alert("You copied " + generated2.value);
+    copy2.textContent = "copied!";
   } else {
     alert("You have not generated a password");
   }
 });
 copy3.addEventListener("click", function () {
+  resetText()
   if (isValid) {
     generated3.select();
     generated3.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(generated3.value);
-    alert("You copied " + generated3.value);
+    copy3.textContent = "copied!";
   } else {
     alert("You have not generated a password");
   }
 });
 copy4.addEventListener("click", function () {
+  resetText()
   if (isValid) {
     generated4.select();
     generated4.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(generated4.value);
-    alert("You copied " + generated4.value);
+    copy4.textContent="copied!"
   } else {
     alert("You have not generated a password");
   }
 });
+
+const resetText = () => {
+  copy1.textContent = "copy"
+  copy2.textContent = "copy"
+  copy3.textContent = "copy"
+  copy4.textContent = "copy"
+}

@@ -19,17 +19,19 @@ body{
     border-radius: 7px;
     box-shadow: 10px 30px 10px 10px rgba(0, 0, 0, 0.25),
       0 10px 10px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
 }
 .copy{
     position: relative;
     text-align: center;
-    left: 70px;
+    /* left: 70px; */
     background-color: green;
     color: #fff;
     border: none;
     text-transform: uppercase;
-    padding: 5px;
     border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5px;
 }
 .gen{
     color: snow;
@@ -45,7 +47,6 @@ body{
     color: grey;
     font-size: 12px;
 }.generate{
-    /* position: relative; */
     color: #fff;
     background-color: green;
     border: none;
@@ -55,24 +56,31 @@ body{
     border-radius: 12px;
     cursor: pointer;
 }
-.generate:hover{
+.generate:hover,.copy:hover{
     background-color: rgb(0, 255, 89);
-    transition: all 1000ms ease-in-out;
+    transition: all 650ms ease-in-out;
     color:#333;
 }
 #state{
     font-size: 10px;
     color: red;
 }
-.display{
+.copy-container{
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:center;
+}
+.copy-top,.copy-down{
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin: 10px auto;
 }
-#down, .copy1{
-    position: relative;
-    top: 10px;
-}
+
 .lenght{
     text-align: center;
     position: relative;
@@ -85,16 +93,17 @@ body{
 #number{
     text-align: center;
     color: green;
-    padding: 10px 40px;
+    width: 60%;
     border: none;
     font-weight: bold;
+    font-size: 25px;
 }
 .div{
     text-align: center;
 }
 .generated1, .generated2, .generated3, .generated4{
-    background-color: #d2d1d2;
-    color: green;
+    background-color: #686868;
+    color: #7eff8d;
     width: 80%;
     border: none;
     text-align: center;
@@ -121,8 +130,8 @@ body{
         background: #1F2937;
         padding: 20px;
     }
-    #copy {
-        left: 50px;
+    .copy {
+        /* left: 50px; */
         color: #fff;
         text-transform: uppercase;
         padding: 5px;
@@ -133,8 +142,6 @@ body{
     .generated2,
     .generated3,
     .generated4 {
-        background-color: #d2d1d2;
-        color: green;
         padding: 7px 12px;
     }
 }
