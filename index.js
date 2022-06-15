@@ -99,4 +99,8 @@ const resetText = () => {
   copy2.textContent = "copy"
   copy3.textContent = "copy"
   copy4.textContent = "copy"
+  gen1 = " ";
+  gen2 = " ";
+  gen3 = " ";
+  gen4 = " ";
 }
