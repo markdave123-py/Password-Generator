@@ -90,25 +90,27 @@ const myValue = document.querySelector("#number");
  ];
 
 function generate() {
-  if (myValue.value >= 1 & myValue.value < 14) {
+  if (myValue.value >= 1 && myValue.value < 14) {
     state.textContent = " ";
      isValid = true;
-    for (let i = 0; i < value;i++) {
+    for (let i = 0; i < myValue.value ;i++) {
       gen1 += arr[Math.floor(Math.random() * arr.length)];
       gen2 += arr[Math.floor(Math.random() * arr.length)];
       gen3 += arr[Math.floor(Math.random() * arr.length)];
       gen4 += arr[Math.floor(Math.random() * arr.length)];
-      
+      console.log(gen1,gen2,gen3,gen4)
      }
-     generated1 = gen1;
-     generated 2= gen2;
-     generated = gen3;
-     generated = gen4;
+     generated1.value = gen1;
+     generated2.value= gen2;
+     generated3.value = gen3;
+     generated4.value= gen4;
+  } else if (myValue.value == "") {
+         state.textContent = "Please enter a valid number!";
    } else {
-     generated = "invalid input";
-     generated = "invalid input";
-     generated = "invalid input";
-     generated = "invalid input";
+     generated1.value = "invalid input";
+     generated2.value= "invalid input";
+     generated3.value = "invalid input";
+     generated4.value = "invalid input";
      state.textContent = "You entered an invalid input!";
      console.log("value is either less than 1 or greater than 13");
    } 
