@@ -1,93 +1,136 @@
+*{
+    font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
 body{
-    margin: 0 auto;
+    margin: 0;
+    font-size: 30px;
 }
 .container{
-    position: relative;
-    width: 20%;
-    left:500px;
-    top: 150px;
+    width: 30%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
     background: #1F2937;
     padding: 20px;
-    border: 2px solid blue;
+    padding-bottom: 40px;
+    border-radius: 7px;
+    box-shadow: 10px 30px 10px 10px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.22);
 }
 #copy{
     position: relative;
-    left: 50px;
+    text-align: center;
+    left: 70px;
     background-color: green;
-    color: grey;
+    color: #fff;
     border: none;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 10px;
 }
 .gen{
     color: snow;
 }
 .rand{
     position: relative;
-    bottom: 22px;
     color: green;
     font-weight: 800;
 }
 .never{
     position: relative;
-    bottom: 37px;
+    padding-bottom: 10px;
     color: grey;
     font-size: 12px;
 }.generate{
-    position: relative;
-    bottom: 20px;
-    color: grey;
+    /* position: relative; */
+    color: #fff;
     background-color: green;
     border: none;
-    padding: 4px 15px 4px 15px;
+    padding: 9px 15px;
+    margin: 5px auto;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.generate:hover{
+    background-color: rgb(0, 255, 89);
+    transition: all 1000ms ease-in-out;
+    color:#333;
 }
 .display{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 #down, .copy1{
     position: relative;
     top: 10px;
 }
-.input, .lenght{
+.lenght{
     text-align: center;
     position: relative;
-    bottom: 40px;
-    color: green;
-    
+    color: rgb(1, 217, 1);
+    font-size: 15px;
+}
+.input{
+    text-align: center;
 }
 #number{
     text-align: center;
     color: green;
+    padding: 10px 40px;
     border: none;
+    font-weight: bold;
 }
 .div{
     text-align: center;
 }
 .generated1, .generated2, .generated3, .generated4{
-    background-color: grey;
+    background-color: #d2d1d2;
     color: green;
     width: 80%;
     border: none;
     text-align: center;
+    padding: 10px 15px;
+    border-radius: 17px;
 }
 @media (max-width: 375px){
-    .container{
+    /* .container{
         width: 70%;
         position: relative;
         left: 30px;
         top: 150px;
         background: #1F2937;
         padding: 20px;
-        border: 2px solid blue;
-    }
+    } */
 }
 @media (min-width: 375px) and (max-width:750px){
     .container{
         width: 50%;
+        height:90vh;
+        margin:0 auto;
+        margin-top: 5px;
         position: relative;
-        left: 130px;
-        top: 150px;
         background: #1F2937;
         padding: 20px;
-        border: 2px solid blue;
+    }
+    #copy {
+        left: 50px;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 5px;
+        border-radius: 10px;
+        letter-spacing: 0.5px;
+    }
+    .generated1,
+    .generated2,
+    .generated3,
+    .generated4 {
+        background-color: #d2d1d2;
+        color: green;
+        padding: 7px 12px;
     }
 }

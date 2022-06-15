@@ -4,10 +4,15 @@ let gen1 = " ";
 let gen2 = " ";
 let gen3 = " ";
 let gen4 = " ";
-let i = 0;
-let value = document.querySelector("#number").value;
+const generated1 = document.querySelector("#generated1");
+const generated2 = document.querySelector("#generated2");
+const generated3 = document.querySelector("#generated3");
+const generated4 = document.querySelector("#generated4");
+const state = document.querySelector("#state")
+let isValid = false
+const myValue = document.querySelector("#number");
  const arr = [
-   "q",
+   "q",//auto code formatting caused this, and i'm too lazy to do anything about it 
    "w",
    "e",
    "r",
@@ -85,53 +90,67 @@ let value = document.querySelector("#number").value;
  ];
 
 function generate() {
- 
-  if (value < 1 || value > 13) {
-    //     document.querySelector(".generated1").placeholder = "invalid input"
-    //     document.querySelector(".generated2").placeholder = "invalid input"
-    //     document.querySelector(".generated3").placeholder = "invalid input"
-    //     document.querySelector(".generated4").placeholder = "invalid input"
-
-    console.log("value is either less than 1 or greater than 13");
-  } else {
-    while (i < value) {
+  if (myValue.value >= 1 & myValue.value < 14) {
+    state.textContent = " ";
+     isValid = true;
+    for (let i = 0; i < value;i++) {
       gen1 += arr[Math.floor(Math.random() * arr.length)];
       gen2 += arr[Math.floor(Math.random() * arr.length)];
       gen3 += arr[Math.floor(Math.random() * arr.length)];
       gen4 += arr[Math.floor(Math.random() * arr.length)];
-      i += 1;
-    }
-    document.querySelector(".generated1").value = gen1;
-    document.querySelector(".generated2").value = gen2;
-    document.querySelector(".generated3").value = gen3;
-    document.querySelector(".generated4").value = gen4;
-  }
+      
+     }
+     generated1 = gen1;
+     generated 2= gen2;
+     generated = gen3;
+     generated = gen4;
+   } else {
+     generated = "invalid input";
+     generated = "invalid input";
+     generated = "invalid input";
+     generated = "invalid input";
+     state.textContent = "You entered an invalid input!";
+     console.log("value is either less than 1 or greater than 13");
+   } 
 }
 function copyA() {
-  let generated1 = document.querySelector(".generated1");
-  generated1.select();
-  generated1.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(generated1.value);
-  alert("You copied " + generated1.value);
+  if (isValid) {
+    generated1.select();
+    generated1.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(generated1.value);
+    alert("You copied " + generated1.value);
+  } else {
+    alert("You have not generated a password");
+  }
 }
 function copyB() {
-  let generated2 = document.querySelector(".generated2");
-  generated2.select();
-  generated2.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(generated2.value);
-  alert("You copied " + generated2.value);
+  if (isValid) {
+    generated2.select();
+    generated2.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(generated2.value);
+    alert("You copied " + generated2.value);
+  } else {
+    alert("You have not generated a password");
+  }
 }
 function copyC() {
-  let generated3 = document.querySelector(".generated3");
-  generated3.select();
-  generated3.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(generated3.value);
-  alert("You copied " + generated3.value);
+  if (isValid) {
+    generated3.select();
+    generated3.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(generated3.value);
+    alert("You copied " + generated3.value);
+  } else {
+    alert("You have not generated a password");
+  }
 }
 function copyD() {
-  let generated4 = document.querySelector(".generated4");
-  generated4.select();
-  generated4.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(generated4.value);
-  alert("You copied " + generated4.value);
+  if (isValid) {
+    generated4.select();
+    generated4.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(generated4.value);
+    alert("You copied " + generated4.value);
+  }
+  else {
+    alert('You have not generated a password')
+  }
 }

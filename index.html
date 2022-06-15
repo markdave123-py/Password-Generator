@@ -22,25 +22,25 @@
         <div class="btn">
             <button class="generate" onclick="generate()"> Generate passwords</button>
         </div>
-        
+        <span id="state"></span>
         <div class="display">
             <div class="btn-top">
                 <div class="div">
-                    <input type="text"  class="generated1" value=" " placeholder="input here">
+                    <input type="text" readonly class="generated1" id = "generated1" value=" " placeholder="input here">
                 </div>
                 <button onclick="copyA()" id="copy">copy</button>
                 <div class="div" id="down">
-                    <input type="text"  class="generated2" value=" " placeholder="input here" >
+                    <input type="text" readonly class="generated2" id="generated2" value=" " placeholder="input here" >
                 </div>
                 <button onclick="copyB()" id="copy" class="copy1">copy</button>
             </div>
             <div class="btn-down">
                 <div class="div">
-                    <input type="text"  class="generated3" value=" " placeholder="input here" >
+                    <input type="text" readonly class="generated3" id="generated3" value=" " placeholder="input here" >
                 </div>
                 <button onclick="copyC()" id="copy">copy</button>
                 <div class="div" id="down">
-                    <input type="text"  class="generated4" value=" " placeholder="input here" >
+                    <input type="text" readonly class="generated4" id="generated4" value=" " placeholder="input here" >
                 </div>
                 <button onclick="copyD()" id="copy" class="copy1">copy</button>
             </div>
