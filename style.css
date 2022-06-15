@@ -20,7 +20,7 @@ body{
     box-shadow: 10px 30px 10px 10px rgba(0, 0, 0, 0.25),
       0 10px 10px rgba(0, 0, 0, 0.22);
 }
-#copy{
+.copy{
     position: relative;
     text-align: center;
     left: 70px;

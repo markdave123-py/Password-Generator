@@ -8,6 +8,10 @@ const generated1 = document.querySelector("#generated1");
 const generated2 = document.querySelector("#generated2");
 const generated3 = document.querySelector("#generated3");
 const generated4 = document.querySelector("#generated4");
+const copy1 = document.getElementById("copy1")
+const copy2 = document.getElementById("copy2")
+const copy3 = document.getElementById("copy3")
+const copy4 = document.getElementById("copy4")
 const state = document.querySelector("#state")
 let isValid = false
 const myValue = document.querySelector("#number");
@@ -89,7 +93,7 @@ const myValue = document.querySelector("#number");
    "0",
  ];
 
-function generate() {
+const generate = () => {
   if (myValue.value >= 1 && myValue.value < 14) {
     state.textContent = " ";
      isValid = true;
@@ -115,7 +119,7 @@ function generate() {
      console.log("value is either less than 1 or greater than 13");
    } 
 }
-function copyA() {
+copy1.addEventListener("click", function () {
   if (isValid) {
     generated1.select();
     generated1.setSelectionRange(0, 99999);
@@ -124,8 +128,8 @@ function copyA() {
   } else {
     alert("You have not generated a password");
   }
-}
-function copyB() {
+});
+copy2.addEventListener("click", function () {
   if (isValid) {
     generated2.select();
     generated2.setSelectionRange(0, 99999);
@@ -134,8 +138,8 @@ function copyB() {
   } else {
     alert("You have not generated a password");
   }
-}
-function copyC() {
+});
+copy3.addEventListener("click", function () {
   if (isValid) {
     generated3.select();
     generated3.setSelectionRange(0, 99999);
@@ -144,15 +148,14 @@ function copyC() {
   } else {
     alert("You have not generated a password");
   }
-}
-function copyD() {
+});
+copy4.addEventListener("click", function () {
   if (isValid) {
     generated4.select();
     generated4.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(generated4.value);
     alert("You copied " + generated4.value);
+  } else {
+    alert("You have not generated a password");
   }
-  else {
-    alert('You have not generated a password')
-  }
-}
+});
