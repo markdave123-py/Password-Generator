@@ -10,38 +10,37 @@
 <body>
     <div class="container">
         <div class="head">
-            <h3 class="gen">Generate a</h3>
-            <h3 class="rand">random password</h3>
+            <h3 class ="gen">Random Password Generator</h3>
             <p class="never">Never use an insecure password again</p>
         </div>
-        <p class="lenght">Please enter the lenght of the password <span>it should be less that 14 characters</span></p>
+        <p class="lenght">Please enter your desired password length, <span>it should be less than 14</span></p>
         <div class="input">
             <input type="number" name="num" id="number">
         </div>
         <div class="btn">
             <button class="generate" onclick="generate()"> Generate passwords</button>
         </div>
-        
-        <div class="display">
-            <div class="btn-top">
-                <div class="div">
-                    <input type="text"  class="generated1" value="something in" >
+        <span id="state"></span>
+        <div class="copy-container">
+            <div class="copy-top">
+                <div class="copy-top one">
+                    <input type="text" readonly class="generated1" id = "generated1" value=" " placeholder="input here">
+                    <button id="copy1" class="copy">copy</button>
                 </div>
-                <button onclick="copyA()" id="copy">copy</button>
-                <div class="div" id="down">
-                    <input type="text"  class="generated2" value="something in" >
+                <div class="copy-top two">
+                    <input type="text" readonly class="generated2" id="generated2" value=" " placeholder="input here" >
+                    <button id="copy2" class="copy">copy</button>
                 </div>
-                <button onclick="copyB()" id="copy" class="copy1">copy</button>
             </div>
-            <div class="btn-down">
-                <div class="div">
-                    <input type="text"  class="generated3" value="something in" >
+            <div class="copy-down">
+                <div class="copy-down one">
+                    <input type="text" readonly class="generated3" id="generated3" value=" " placeholder="input here" >
+                    <button id="copy3" class="copy">copy</button>
                 </div>
-                <button onclick="copyC()" id="copy">copy</button>
-                <div class="div" id="down">
-                    <input type="text"  class="generated4" value="something in" >
+                <div class="copy-down two">
+                    <input type="text" readonly class="generated4" id="generated4" value=" " placeholder="input here" >
+                    <button id="copy4" class="copy">copy</button>
                 </div>
-                <button onclick="copyD()" id="copy" class="copy1">copy</button>
             </div>
         </div>
     </div>
